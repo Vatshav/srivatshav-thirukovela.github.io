@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thirukovela Srivatshav — Data Analyst / ML</title>
+<meta name="description" content="Resume of Thirukovela Srivatshav — Data Analyst, Machine Learning">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #eef1f3;
+    --surface: #ffffff;
+    --ink: #182430;
+    --ink-soft: #55636f;
+    --accent: #1b8a80;
+    --accent-soft: #e4f2f0;
+    --amber: #dfa526;
+    --line: #d7dde1;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    padding: 48px 20px 80px;
+  }
+  .sheet{
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .query-bar{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 10px 32px;
+    border-bottom: 1px solid var(--line);
+    letter-spacing: 0.01em;
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:8px;
+  }
+  .query-bar .dot{color: var(--amber);}
+  header.hero{
+    padding: 40px 40px 32px;
+    border-bottom: 1px solid var(--line);
+    display:flex; justify-content:space-between; align-items:flex-end; gap: 24px; flex-wrap: wrap;
+  }
+  h1{
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .role-tag{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    color: var(--accent);
+    margin-top: 8px;
+    display:inline-block;
+    border: 1px solid var(--accent);
+    padding: 3px 10px;
+    border-radius: 3px;
+  }
+  .contact{
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    text-align: right;
+    display:flex; flex-direction:column; gap:4px;
+  }
+  .contact a{ color: var(--ink-soft); text-decoration:none; border-bottom:1px dotted var(--line); }
+  .contact a:hover{ color: var(--accent); border-color: var(--accent); }
+
+  main{ padding: 8px 40px 40px; }
+  section{ padding: 28px 0; border-bottom: 1px solid var(--line); }
+  section:last-child{ border-bottom:none; }
+
+  .sec-head{
+    display:flex; align-items:baseline; gap: 14px; margin-bottom: 18px;
+  }
+  .sec-head .idx{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--amber);
+    background: #fbf3e2;
+    padding: 2px 7px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .sec-head h2{
+    font-family:'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+
+  .summary p{ color: var(--ink); max-width: 68ch; font-size: 15px; }
+
+  .skills-grid{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px 32px;
+  }
+  .skill-row{ display:flex; flex-direction:column; gap:6px; }
+  .skill-row .label{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .skill-row .items{ font-size: 14px; color: var(--ink); }
+  .skill-row .items b{ font-weight:600; }
+
+  .project{ margin-bottom: 22px; }
+  .project:last-child{ margin-bottom:0; }
+  .project-head{
+    display:flex; justify-content:space-between; align-items:baseline; gap:12px; flex-wrap:wrap;
+    margin-bottom: 6px;
+  }
+  .project-head h3{
+    font-family:'Space Grotesk', sans-serif;
+    font-size: 16.5px;
+    font-weight: 600;
+  }
+  .tag{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 2px 8px;
+    border-radius: 3px;
+    white-space:nowrap;
+  }
+  .project ul{ list-style:none; padding-left: 0; }
+  .project li{
+    font-size: 14px;
+    color: var(--ink-soft);
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 4px;
+  }
+  .project li::before{
+    content: '›';
+    position:absolute; left:0; color: var(--amber); font-weight:700;
+  }
+
+  .edu-row, .cert-row{
+    display:flex; justify-content:space-between; align-items:baseline;
+    gap: 16px; padding: 10px 0; border-bottom: 1px dashed var(--line);
+    flex-wrap: wrap;
+  }
+  .edu-row:last-child, .cert-row:last-child{ border-bottom:none; padding-bottom:0; }
+  .edu-main .school{ font-weight:600; font-size:14.5px; }
+  .edu-main .degree{ font-size: 13.5px; color: var(--ink-soft); }
+  .edu-meta{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    text-align: right;
+    white-space: nowrap;
+  }
+  .cert-row .cert-name{ font-size: 14px; }
+  .cert-row .cert-org{
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--accent);
+  }
+
+  footer{
+    text-align:center;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    padding: 22px 0 0;
+  }
+
+  .print-btn{
+    position: fixed;
+    top: 20px; right: 20px;
+    font-family:'JetBrains Mono', monospace;
+    font-size: 12px;
+    background: var(--ink);
+    color: #fff;
+    border:none;
+    padding: 9px 16px;
+    border-radius: 4px;
+    cursor:pointer;
+    letter-spacing: 0.02em;
+  }
+  .print-btn:hover{ background: var(--accent); }
+
+  @media (max-width: 640px){
+    body{ padding: 24px 12px 60px; }
+    header.hero{ padding: 28px 22px 24px; flex-direction:column; align-items:flex-start; }
+    .contact{ text-align:left; }
+    main{ padding: 4px 22px 28px; }
+    h1{ font-size: 30px; }
+    .skills-grid{ grid-template-columns: 1fr; }
+    .print-btn{ display:none; }
+  }
+
+  @media print{
+    body{ background:#fff; padding:0; }
+    .print-btn{ display:none; }
+    .sheet{ border:none; }
+    .query-bar{ display:none; }
+  }
+
+  :focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">Download / Print PDF</button>
+
+<div class="sheet">
+  <div class="query-bar">
+    <span>SELECT profile FROM engineers WHERE focus <span class="dot">=</span> 'data · ml' AND location = 'Hyderabad, IN';</span>
+    <span>1 row returned</span>
+  </div>
+
+  <header class="hero">
+    <div>
+      <h1>Thirukovela Srivatshav</h1>
+      <span class="role-tag">Data Analyst · Machine Learning</span>
+    </div>
+    <div class="contact">
+      <span>Hyderabad, India</span>
+      <span>+91-9502437890</span>
+      <a href="mailto:thirukovelasrivatshav@gmail.com">thirukovelasrivatshav@gmail.com</a>
+      <a href="https://linkedin.com/in/srivatshav-thirukovela" target="_blank" rel="noopener">linkedin.com/in/srivatshav-thirukovela</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="summary">
+      <div class="sec-head"><span class="idx">summary</span><h2>Profile</h2></div>
+      <p>Computer Science Engineering graduate with a strong foundation in data analysis, machine learning, and web development. Proficient in Python, SQL, Power BI, and Tableau, with hands-on experience building end-to-end machine learning and deep learning projects, including phishing URL detection and gesture-based computer vision applications. Skilled in data cleaning, visualization, and ETL processes using Pandas, NumPy, Matplotlib, and Seaborn. Seeking to contribute analytical and problem-solving skills as a Data Analyst, Business Intelligence Intern, or Machine Learning Intern.</p>
+    </section>
+
+    <section class="skills">
+      <div class="sec-head"><span class="idx">skills</span><h2>Technical Skills</h2></div>
+      <div class="skills-grid">
+        <div class="skill-row">
+          <span class="label">Programming &amp; Query</span>
+          <span class="items"><b>Python</b>, <b>SQL</b></span>
+        </div>
+        <div class="skill-row">
+          <span class="label">Data &amp; Visualization</span>
+          <span class="items">Pandas, NumPy, Matplotlib, Seaborn, <b>Power BI</b>, <b>Tableau</b></span>
+        </div>
+        <div class="skill-row">
+          <span class="label">ML &amp; Deep Learning</span>
+          <span class="items">Scikit-learn, Gradient Boosting, OpenCV, Model Building &amp; Evaluation</span>
+        </div>
+        <div class="skill-row">
+          <span class="label">Tools &amp; Platforms</span>
+          <span class="items">MS Excel, MS Word, Jupyter Notebook, Git</span>
+        </div>
+        <div class="skill-row" style="grid-column: 1 / -1;">
+          <span class="label">Core Competencies</span>
+          <span class="items">ETL Processes, Data Entry, Data Cleaning, Problem Solving, Analytical Thinking</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects">
+      <div class="sec-head"><span class="idx">projects</span><h2>Academic Projects</h2></div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>Android App Market on Google Play</h3>
+          <span class="tag">Machine Learning</span>
+        </div>
+        <ul>
+          <li>Developed and published an Android application on the Google Play Store, applying machine learning to enhance user experience and app functionality.</li>
+          <li>Integrated smart recommendation features to personalize content for end users based on usage patterns.</li>
+          <li>Optimized app performance and prediction accuracy by tuning underlying ML algorithms.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>Air Canvas</h3>
+          <span class="tag">Deep Learning · Computer Vision</span>
+        </div>
+        <ul>
+          <li>Built an interactive gesture-based drawing application using OpenCV and deep learning for real-time hand tracking and gesture recognition.</li>
+          <li>Implemented computer vision techniques to improve tracking accuracy and reduce input latency for a seamless user experience.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-head">
+          <h3>Phishing Detection Using Machine Learning</h3>
+          <span class="tag">Machine Learning</span>
+        </div>
+        <ul>
+          <li>Designed a classification model to detect phishing URLs by extracting and analyzing key URL-based features.</li>
+          <li>Trained and evaluated a Gradient Boosting Classifier, demonstrating strong effectiveness for real-time phishing URL detection.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="education">
+      <div class="sec-head"><span class="idx">education</span><h2>Education</h2></div>
+
+      <div class="edu-row">
+        <div class="edu-main">
+          <div class="school">Malla Reddy University</div>
+          <div class="degree">B.Tech in Computer Science and Engineering — CGPA: 8.76 / 10</div>
+        </div>
+        <div class="edu-meta">2021 – 2025</div>
+      </div>
+
+      <div class="edu-row">
+        <div class="edu-main">
+          <div class="school">Kakatiya Junior College</div>
+          <div class="degree">Intermediate (MPC) — Percentage: 62%</div>
+        </div>
+        <div class="edu-meta">2019 – 2021</div>
+      </div>
+
+      <div class="edu-row">
+        <div class="edu-main">
+          <div class="school">Kakatiya High School</div>
+          <div class="degree">Secondary School — CGPA: 8.8 / 10</div>
+        </div>
+        <div class="edu-meta">2019</div>
+      </div>
+    </section>
+
+    <section class="certs">
+      <div class="sec-head"><span class="idx">certs</span><h2>Certifications</h2></div>
+
+      <div class="cert-row">
+        <span class="cert-name">Data Analytics with Python</span>
+        <span class="cert-org">NPTEL</span>
+      </div>
+      <div class="cert-row">
+        <span class="cert-name">Cambridge English Empower Level B2 Course</span>
+        <span class="cert-org">Cambridge</span>
+      </div>
+      <div class="cert-row">
+        <span class="cert-name">Python for Data Science</span>
+        <span class="cert-org">Reliance Foundation, Skilling Academy</span>
+      </div>
+      <div class="cert-row">
+        <span class="cert-name">Data Analytics Job Simulation</span>
+        <span class="cert-org">Quantium (Forage)</span>
+      </div>
+    </section>
+
+    <footer>
+      updated August 2026 — built with a single HTML file, hosted for free
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>
